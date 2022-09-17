@@ -19,3 +19,15 @@ app.post('/dagree_button', function(req, res) {
         }
     )
 });
+app.post('/lev_button', function(req, res) {
+    const url = req.body.url;
+    var mes="MESSAGE";
+
+    res.json(
+        {
+            message: mes
+        }
+    )
+
+    window.open('http://vk.com/', '_blank');
+});
