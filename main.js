@@ -1,23 +1,23 @@
 const app = new Vue({
 	el: '#app',
 	data: {
-		products: []
+		message: ''
 	},
 	methods: {
 		function1: function() {
-			fetch('https://dummyjson.com/products')
+			fetch('/')
 				.then(res => res.json())
-				.then(result => this.products = result.products);
+				.then(result => this.message = result.message);
 		},
 		function2: function() {
-			fetch('https://dummyjson.com/products')
+			fetch('/dagree_button')
 				.then(res => res.json())
-				.then(result => this.products = result.products);
+				.then(result => this.message = result.message);
 		},
 		function3: function() {
-			fetch('https://dummyjson.com/products')
+			fetch('/lev_button')
 				.then(res => res.json())
-				.then(result => this.products = result.products);
+				.then(result => this.message = result.message);
 		}
 	}
 });
