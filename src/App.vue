@@ -1,17 +1,17 @@
 <template>
 	<TopHeader />
-	<MovieList />
+	<GameList />
 </template>
 
 <script>
 	import TopHeader from './components/TopHeader.vue'
-	import MovieList from './components/MovieList.vue'
+	import GameList from './components/GameList.vue'
 	
 	export default {
 		name: 'App',
 		components: {
 			TopHeader,
-			MovieList
+			GameList
 		}
 	}
 </script>
