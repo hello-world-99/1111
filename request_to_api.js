@@ -1,9 +1,13 @@
 //this is JS BITCHadd
+const https  = require('https');
 const express = require('express');
 const app = express();
 const path = require('path');
 
-function currency(date,fromCurrency,toCurrency,callback, apiKey){
+var num;
+
+function currency(date,fromCurrency,toCurrency){
+    var apiKey = '2fc09f43da30d6f80261';
     var rate;
     date =encodeURIComponent(date);
     fromCurrency = encodeURIComponent(fromCurrency);
@@ -22,6 +26,7 @@ function currency(date,fromCurrency,toCurrency,callback, apiKey){
             var jsonObj = JSON.parse(body);
             var val = jsonObj[query];
             val=JSON.stringify(val);
+            console.log(val);
             var a = val.indexOf(':')+1;
             var b = val.indexOf('}')-1;
             val = val.slice(a,b);  
@@ -29,7 +34,8 @@ function currency(date,fromCurrency,toCurrency,callback, apiKey){
             rate = Math.round(total * 100) / 100;
             console.log(fromCurrency+' '+rate);
             num = parseFloat(rate)
-            callback(fromCurrency);
+            //callback(fromCurrency);
+            console.log(num)
         }); 
     }).on('error', function(e){
           console.log("Got an error: ", e);
@@ -67,3 +73,5 @@ app.post('/lev_button', function(req, res) {
 
     window.open('http://vk.com/', '_blank');
 });
+
+currency('2022-09-16','USD','RUB');
