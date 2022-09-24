@@ -71,7 +71,5 @@ app.post('/lev_button', function(req, res) {
         }
     )
 
-    window.open('http://vk.com/', '_blank');
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ/', '_blank');
 });
-
-currency('2022-09-16','USD','RUB');
