@@ -20,6 +20,4 @@ const app = new Vue({
 				.then(result => this.message = result.message);
 		}
 	}
-	//tst
 });
-
