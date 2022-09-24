@@ -57,6 +57,7 @@ app.post('/dagree_button', function(req, res) {
 
     res.json(
         {
+            currency('2022-09-16','USD','RUB');
             message: mes
         }
     )
