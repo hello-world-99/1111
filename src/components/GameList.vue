@@ -1,5 +1,16 @@
 <template>
 	<div class="container mt-4 mb-5">
+		<div class="row mb-4">
+			<div class="col-md-1 d-grid gap-2">
+				<button class="btn btn-sm btn-block btn-secondary">All</button>
+			</div>
+			<div class="col-md-1 d-grid gap-2">
+				<button class="btn btn-sm btn-block btn-secondary">PC (Windows)</button>
+			</div>
+			<div class="col-md-1 d-grid gap-2">
+				<button class="btn btn-sm btn-block btn-secondary">Web Browser</button>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-3" v-for="game in games" :key="game.id">
 				<CardGame

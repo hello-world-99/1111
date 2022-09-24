@@ -3,7 +3,7 @@
 		<div class="container">
 			<a class="navbar-brand" href="#">
 				<img src="/logo.svg" alt="Bootstrap" width="30" height="24">
-				Movies
+				Games
 			</a>
 		</div>
 	</nav>
