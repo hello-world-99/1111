@@ -45,7 +45,7 @@ app.post('/dagree_button', function(req, res) {
                 message: num
             }
         )
-        },2000);
+        },700);
     
     
 });
