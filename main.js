@@ -5,19 +5,34 @@ const app = new Vue({
 	},
 	methods: {
 		function1: function() {
-			fetch('/')
-				.then(res => res.json())
-				.then(result => this.message = result.message);
+			fetch('http://localhost:3000/')
+			.then(res => res.json())
+			.then(result => {
+				this.message = result.message
+				console.log("Function 1")
+			});
 		},
 		function2: function() {
-			fetch('/dagree_button')
-				.then(res => res.json())
-				.then(result => this.message = result.message);
+			fetch('http://localhost:3000/dagree_button', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: ''
+			})
+			.then(res => res.json())
+			.then(result => this.message = result.message);
 		},
 		function3: function() {
-			fetch('/lev_button')
-				.then(res => res.json())
-				.then(result => this.message = result.message);
+			fetch('http://localhost:3000/lev_button', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: ''
+			})
+			.then(res => res.json())
+			.then(result => this.message = result.message);
 		}
 	}
 });
